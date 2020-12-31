@@ -180,16 +180,13 @@ inside 1
 */
 
 
-for (let outsideCounter = 0; outsideCounter <= 3 ; i--) {
-  console.log("counting down from", outsideCounter);
-  for (let insideCounter = 1; outsideCounter <= 3; i--) {
-    console.log("inside" , insideCounter);
-    for (let innerCounter = 3; outsideCounter <= 3; i--) {
-        console.log("inner", innerCounter);
-    }
-  }
-  console.log(outsideCounter);
-}
+// for (let outsideCounter = 0; outsideCounter <= 3 && outsideCounter >= 0; outsideCounter++) {
+//   console.log("counting down from", outsideCounter);
+//   for (let insideCounter = outsideCounter; insideCounter <=3 && insideCounter >0; insideCounter--) {
+//     console.log("inside", insideCounter);
+//   }
+//   console.log("***********************************");
+// }
 
 // Congrats, you made it to the end!
 // Did you find this easy or hard? If you used references, which ones helped you?
