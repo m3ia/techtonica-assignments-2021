@@ -191,7 +191,8 @@ inside 1
 // Congrats, you made it to the end!
 // Did you find this easy or hard? If you used references, which ones helped you?
 // Please answer in a comment below.
-//
+//For Exercise 10, I used this website: 
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements
 
 // Email your file to us or commit your file to GitHub and email us a link.
 
