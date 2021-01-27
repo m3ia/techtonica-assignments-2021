@@ -1,0 +1,54 @@
+h1 {
+  color: rgb(55, 124, 109);
+  
+}
+
+a {
+  color: rgb(187, 193, 49);
+}
+
+h3 {
+  color: rgb(230, 75, 101);
+}
+
+body {
+  background-color: white;
+}
+
+#intro {
+  text-align: center;
+}
+
+#boxes {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.left {
+  text-align: left;
+  float: left;
+  height: auto;
+  width: 45%;
+  padding: 10px 10px ;
+  /* border: 2px solid rgb(45, 108, 103); */
+  margin: 2px rgb(248, 147, 63);
+}
+
+.right {
+  text-align: left;
+  float: left;
+  height: auto;
+  width: 45%;
+  padding: 10px 10px 10px 10px;
+  /* border: 2px solid rgb(248, 147, 63); */
+}
+
+#column1 {
+  background-color: white;
+
+}
+
+#column2 {
+  background-color: white;
+}
