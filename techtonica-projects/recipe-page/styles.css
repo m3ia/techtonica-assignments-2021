@@ -1,18 +1,26 @@
 h1 {
+  font-family: 'Roboto Slab', serif;
   color: rgb(55, 124, 109);
-  
-}
 
-a {
-  color: rgb(187, 193, 49);
-}
-
-h3 {
-  color: rgb(230, 75, 101);
 }
 
 body {
-  background-color: white;
+  background-color: beige;
+}
+
+p {
+  font-family: 'Roboto Slab', serif;
+
+}
+h3 {
+  font-family: 'Roboto Slab', serif;
+  color: rgb(230, 75, 101);
+  font-weight: bolder;
+}
+
+
+a {
+  color: rgb(187, 193, 49);
 }
 
 #intro {
@@ -20,6 +28,7 @@ body {
 }
 
 #boxes {
+  font-family: 'Roboto Slab', serif;
   content: "";
   display: table;
   clear: both;
@@ -45,10 +54,10 @@ body {
 }
 
 #column1 {
-  background-color: white;
+  /* background-color: white; */
 
 }
 
 #column2 {
-  background-color: white;
+  /* background-color: white; */
 }
