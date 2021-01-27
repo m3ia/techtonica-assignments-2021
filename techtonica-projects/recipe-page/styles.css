@@ -30,6 +30,8 @@ a {
 
 .bg {
   text-align:center;
+  width=500
+  margin-top: ;
   padding: 10px 30px 10px 30px;
 }
 
@@ -47,7 +49,7 @@ a {
   max-width: 500px;
   padding: 10px 10px ;
   /* border: 2px solid rgb(45, 108, 103); */
-  margin: 2px rgb(248, 147, 63);
+  margin: 2px; 
 }
 
 .right {
