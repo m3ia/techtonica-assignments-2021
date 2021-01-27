@@ -1,5 +1,4 @@
 h1 {
-  font-family: 'Roboto Slab', serif;
   color: rgb(55, 124, 109);
 
 }
@@ -8,12 +7,13 @@ body {
   background-color: beige;
 }
 
-p {
+
+p, h3, h1 {
   font-family: 'Roboto Slab', serif;
 
 }
+
 h3 {
-  font-family: 'Roboto Slab', serif;
   color: rgb(230, 75, 101);
   font-weight: bolder;
 }
@@ -25,6 +25,12 @@ a {
 
 #intro {
   text-align: center;
+
+}
+
+.bg {
+  text-align:center;
+  padding: 10px 30px 10px 30px;
 }
 
 #boxes {
@@ -38,7 +44,7 @@ a {
   text-align: left;
   float: left;
   height: auto;
-  width: 45%;
+  max-width: 500px;
   padding: 10px 10px ;
   /* border: 2px solid rgb(45, 108, 103); */
   margin: 2px rgb(248, 147, 63);
@@ -49,7 +55,7 @@ a {
   float: left;
   height: auto;
   width: 45%;
-  padding: 10px 10px 10px 10px;
+  padding: 10px 10px 10px 30px;
   /* border: 2px solid rgb(248, 147, 63); */
 }
 
