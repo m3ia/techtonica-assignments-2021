@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../../.."
+		},
+		{
+			"path": "../../../../foo"
+		},
+		{
+			"path": "../../../../code-challenges-meia"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "dev"
+	}
+}

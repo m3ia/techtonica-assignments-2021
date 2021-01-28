@@ -26,6 +26,7 @@ a {
 
 #img {
   vertical-align: text-bottom;
+  /* width: 32%; */
 }
 
 .bg {
@@ -61,4 +62,3 @@ a {
   /* border: 2px solid rgb(248, 147, 63); */
 }
 
-}
