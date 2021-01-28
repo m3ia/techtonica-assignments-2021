@@ -30,7 +30,7 @@ a:hover {
 
 #img {
   vertical-align: text-bottom;
-  /* width: 32%; */
+  max-width: 100%;
 }
 
 .bg {
