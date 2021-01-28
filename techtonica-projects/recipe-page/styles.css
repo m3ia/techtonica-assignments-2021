@@ -4,12 +4,7 @@ h1 {
 }
 
 body {
-  /* background-color: beige; */
-  background: linear-gradient(45deg, beige, whie);
-}
-
-
-p, h3, h1 {
+  background: linear-gradient(45deg, beige, white);
   font-family: 'Roboto Slab', serif;
 
 }
@@ -29,18 +24,22 @@ a {
 
 }
 
+#img {
+  vertical-align: text-bottom;
+}
+
 .bg {
   text-align:center;
-  width:500;
-  margin-top: ;
+  width:500
+  max-resolution:top 10px;
   padding: 10px 30px 10px 30px;
 }
 
 #container {
-  font-family: 'Roboto Slab', serif;
   content: "";
   display: table;
   clear: both;
+  word-wrap:break-word;
 }
 
 .left {
@@ -48,7 +47,7 @@ a {
   float: left;
   height: auto;
   /* max-width: 500px; */
-  padding: 10px 10px ;
+  padding: 10px 10px 10px 10px;
   /* border: 2px solid rgb(45, 108, 103); */
   margin: 2px; 
 }
@@ -57,16 +56,9 @@ a {
   text-align: left;
   float: left;
   height: auto;
-  /* width: 45%; */
-  padding: 10px 10px 10px 30px;
+  width: 45%;
+  padding: 10px 10px 50 10px;
   /* border: 2px solid rgb(248, 147, 63); */
 }
 
-#column1 {
-  /* background-color: white; */
-
-}
-
-#column2 {
-  /* background-color: white; */
 }
