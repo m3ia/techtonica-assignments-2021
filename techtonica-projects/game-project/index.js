@@ -6,11 +6,13 @@ const guessField = document.getElementById('guessField');
 var randNum=  Math.floor(Math.random() * 10) + 1;
 let guess = 0;
 
-const guess_counter = document.getElementById('guess_counter').innerHTML = "Number of guesses: " + guess;
+const guess_counter = document.getElementById('guess_counter'); 
 
 function resetGame() {
   randNum=  Math.floor(Math.random() * 10) + 1;
-  guess = 0;  
+  guess = 0; 
+  document.getElementById("guess_counter").innerHTML = "Number of guesses: " + guess;
+ 
 }
 
 myButton.addEventListener('click', () => {
@@ -19,21 +21,24 @@ myButton.addEventListener('click', () => {
   if (x==randNum) {
     alert("Yay! You got it!");
     guess++;
+    document.getElementById("guess_counter").innerHTML = "Number of guesses: " + guess;
     resetGame();
 
   }
   else if (x> randNum) {
     guess++;
+    document.getElementById("guess_counter").innerHTML = "Number of guesses: " + guess;
     alert("Hm. Maybe try a smaller number?");
   } else if (x < randNum) {
     guess++;
+    document.getElementById("guess_counter").innerHTML = "Number of guesses: " + guess;
     alert("Perhaps a greater number?");
   } else {
     alert("Please enter a number between 0 and 10.");
   }
   guessField.value = "";
   guessField.focus();
-  
+
 });
 
 
