@@ -73,8 +73,6 @@ class TicketType {
   }
 }
 
-// Event.prototype.addAvailableTickets = Object.prototype(Event.prototype);
-
 
 eventObj1.addAvailableTickets("human", 299);
 eventObj1.addAvailableTickets("vampire", 99);
@@ -84,4 +82,19 @@ eventObj3.addAvailableTickets("Orchestra", 300)
 eventObj3.addAvailableTickets("Mezzanine", 200)
 eventObj3.addAvailableTickets("Balcony", 100)
 
-console.log(eventObj1.availableTickets[0].type);
+// console.log(eventObj1.availableTickets[0].type);
+
+/* alternative searchTickets function:
+this.searchTickets = ((lower, upper) => {
+  const eligibleTickets = this.availableTickets.filter((ticket) => {
+    return ticket.price >= lower && ticket.price <= upper;
+  });
+  if (eligibleTickets.length > 0) {
+    const ticketString = eligibleTickets.map((ticket, index) => {
+      return `${index + 1}. ${ticket.type} (\$${ticket.price})`;
+    }).join(' ');
+    return `Eligible Tickets: ${ticketString}`;
+  }
+  return "No tickets available. ";
+}); */
+
