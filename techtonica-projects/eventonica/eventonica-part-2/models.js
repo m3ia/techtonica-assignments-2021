@@ -1,4 +1,10 @@
+/**
+ * Paste your code from Part 1 into this file but keep the module check at the very end.
+ * (The following is a just a small subset for the Add Event form on the example page to work)
+ */
+
 class Eventonica {
+
   addEvent(/* user input + user clicks submit? */) {
     // have a field for each piece of input
     // create a function so user can enter input
@@ -6,6 +12,8 @@ class Eventonica {
     //maybe first checks to see if the user is signed in or needs to sign up for an account? 
 
     // Adds a new Event
+    return new Event(name);
+
   }
 
   updateEvent(/* user input + user clicks submit? */) {
@@ -55,6 +63,8 @@ class Event {
   static _nextId = 100;
 
   constructor(/* event name, place, etc... */) {
+    this.name = name;
+    this.id = Event._nextId++;
     this.id = Event._nextId++;
     // properties: event name, place/link, time, description, organizer, category (career? presentation? live show? entertainment? group)
     // decide what properties are required
@@ -72,6 +82,15 @@ class Event {
   }
 }
 
+// event area
+class Event {
+  static all = [];
+  static _nextId = 100;
+
+
+  }
+
+// user area 
 class User {
   static all = [];
   static _nextId = 200;
@@ -82,10 +101,21 @@ class User {
     User.all.push(this); // keep track of all created instances
   }
   
-
   //add favorite function, collection
   favorite () {
     // get and set 
   }
 
+}
+
+// class User {}
+
+// class Eventonica {
+//   addEvent(name) {
+//     return new Event(name);
+//   }
+// }
+
+if (typeof module !== "undefined") {
+  module.exports = { Eventonica, User, Event };
 }
