@@ -9,11 +9,11 @@ class Event {
   static all = [];
   static _nextId = 100;
 
-  constructor(name, date, categories) {
+  constructor(name, date, category) {
     this.name = name;
     this.id = Event._nextId++;
     this.date = date;
-    this.categories = categories; // entertainment? public? food? 
+    this.category = category; // entertainment? public? food? 
 
     Event.all.push(this); // keep track of all created instances
 
@@ -27,7 +27,7 @@ class Event {
 
   static findByCategory(category) {
     // searches for events that check a category array for each event object for the selected category
-    return Event.all.filter(event => event.categories.includes(category));
+    return Event.all.filter(event => event.category === category);
   }
 }
 
@@ -51,7 +51,7 @@ class User {
 }
 
 class Eventonica {
-  addEvent(name, date, categories) {
+  addEvent(name, date, category) {
     // have a field for each piece of input
     // create a function so user can enter input
     // create a submit button. onlick, will erase everything, parse all input, and enter it into an object for the user.
@@ -59,7 +59,7 @@ class Eventonica {
 
     // Adds a new Event
 
-    new Event(name, date, categories);
+    new Event(name, date, category);
 
   }
 
