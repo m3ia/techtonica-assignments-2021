@@ -3,7 +3,6 @@
  */
 
 
-const newProp = // document.getElementById("userUpdateProp").value. need to create this in html at some point
 
 document.addEventListener("DOMContentLoaded", () => {
   // Use this to call all the logic we already created
@@ -28,27 +27,22 @@ document.addEventListener("DOMContentLoaded", () => {
     refreshEventsList();
     addEventForm.reset();
   });
+
+  const refreshUserList = () => {
+      document.querySelector("#users-list").innerHTML = User.all
+      .map((user) => `<li>${user.name}</li>`)
+      .join("\n");
+  };
+
+
+  const addUserForm = document.querySelector("#add-user");
+
+  addUserForm.addEventListener("submit", (submitUser) => {
+    submitUser.preventDefault();
+    const userName = document.querySelector("#add-username").value;
+    const user = app.addUser(userName);
+    console.log("Added user", user);
+    refreshUserList();
+    addUserForm.reset();
+  });
 });
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   const newUser = new User();
-
-//   // Builds HTML list for all event. You must call this function after you change, add, or remove any events.
-//   const refreshUserList = () => {
-//       .map((user) => `<li>${user.name}</li>`)
-//       .join("\n");
-//   };
-
-
-//   const addUserForm = document.querySelector("#add-user");
-
-//   // Handle add event form submit by calling our instance of Eventonica, `app`
-//   addUserForm.addEventListener("submit", (submitUser) => {
-//     submitUser.preventDefault();
-//     const userName = document.querySelector("#add-user-name").value;
-//     const user = newUser.addUser(userName);
-//     console.log("Added user", user);
-//     refreshUserList();
-//     addUserForm.reset();
-//   });
-// });
