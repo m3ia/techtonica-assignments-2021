@@ -6,7 +6,21 @@
 const user_Name = document.getElementById("add-username").value;
 
 class Event {
-  static all = [];
+  static all = [
+   {
+    category: "Charity",
+    date: "2021-02-24",
+    id: 100,
+    name: "adsf"
+  },
+
+  {
+    category: "Amusement/Fairs/Festivals",
+    date: "2021-02-26",
+    id: 101,
+    name: "asdfasdf"
+  }
+  ];
   static _nextId = 100;
 
   constructor(name, date, category) {
@@ -38,6 +52,7 @@ class User {
   constructor(name) {
     this.name = name;
     this.id = User._nextId++;
+    this.favorites = [];
     // decide what properties are required on an instance
     User.all.push(this); // keep track of all created instances
   }
@@ -45,7 +60,7 @@ class User {
 
   //add favorite function, collection
   favorite () {
-    // get and set 
+    
   }
 
 }
@@ -82,20 +97,21 @@ class Eventonica {
     Event.all = Event.all.filter(event => event.id !== id);
   }
 
-  // findEventsByDate(date) { // seems like duplicate in class Event
-  //   // user will be able to enter a starting date and an ending date; 
-  //   // user will be given results of events that fall between those dates.
-  //   // Return items in Event.all with a specified date
-  //   return Event.all.filter(event => event.date === date);
-  // }
+  findEventsByDate(date) { // seems like duplicate in class Event
+    // user will be able to enter a starting date and an ending date; 
+    // user will be given results of events that fall between those dates.
+    // Return items in Event.all with a specified date
+    
+    return Event.all.filter(event => event.date === date);
+  }
 
-  // findEventsbyCategory(category) { // seems like duplicate in class Event
-  //   // user will be able to view different categories --mapped to event property. upon clicking one, all events tagged in that category will be viewable in a list. all events will be actionable.
-  //   // try using strings to store the categories to place within an array or array of objects? 
-  //   // Return items in Event.all with a specified category
-  //   // have something that iterates over each checkbox rather than creating a variable for each.
-  //   return Event.all.filter(event => event.categories.includes(category));
-  // }
+  findEventsByCategory(category) { // seems like duplicate in class Event
+    // user will be able to view different categories --mapped to event property. upon clicking one, all events tagged in that category will be viewable in a list. all events will be actionable.
+    // try using strings to store the categories to place within an array or array of objects? 
+    // Return items in Event.all with a specified category
+    // have something that iterates over each checkbox rather than creating a variable for each.
+    return Event.all.filter(event => event.category === category);
+  }
 
   addUser(name) {
     new User(name);
