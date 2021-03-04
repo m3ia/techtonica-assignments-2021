@@ -3,7 +3,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 const lists = new Map();
-lists.set('yumbo', {members: ["talea@techtonica.org", "michelle@techtonica.org"]});
+// lists.set('yumbo', {members: ["talea@techtonica.org", "michelle@techtonica.org"]});
 
 // see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map
 
@@ -21,7 +21,7 @@ app.route('/lists/:name').get((req,res)=>{
   let response = "Unable to fetch data!";
   lists.forEach((list) => {
       if (list["name"] == list_name) {
-          res.status(200).send(list);
+          res.status(200).send(`${list.name} includes ${list.members}`);
       }
   });
   res.status(status).send(response);
