@@ -1,10 +1,10 @@
 const express = require('express');
 
 // import addEvent from './models.js';
-// const models = require('./models.js');
-// const eventonica = models.eventonica;
-const { Eventonica, User, Event, testEvent } = require('./models.js');
-const eventonica = new Eventonica(); 
+const models = require('./models.js');
+// const eventonica = models.Eventonica();
+// const { Eventonica, User, Event, testEvent } = require('./models.js');
+// const eventonica = new Eventonica(); 
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -31,7 +31,11 @@ app.route('/events').get((req, res) => {
 });
 
 app.route('/users').get((req, res) => {
-  res.send(User.all);
+  res.send(models.User.all);
+});
+
+app.route('/sky').get((req, res) => {
+  res.send(models.sky);
 });
 
 // app.route('/users/)
