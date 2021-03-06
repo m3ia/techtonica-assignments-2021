@@ -149,7 +149,8 @@ if (typeof module !== "undefined") {
   module.exports = {
     Eventonica,
     User,
-    Event
+    Event, 
+    sky
   };
 }
 
