@@ -1,9 +1,11 @@
 const express = require('express');
 
 // import addEvent from './models.js';
-const Eventonica = require('./models.js');
-// console.log(Example.test());
-// const main = require('./main.js');
+// const models = require('./models.js');
+// const eventonica = models.eventonica;
+const { Eventonica, User, Event, testEvent } = require('./models.js');
+const eventonica = new Eventonica(); 
+
 const app = express();
 const port = process.env.PORT || 3000;
 const bodyParser = require('body-parser');
@@ -22,6 +24,16 @@ app.get('/', (req, res) => {
   res.send("Hello World!");
 });
 
-app.get('/events', (req, res) => {
-  res.send(Eventonica.Event.all);
+app.route('/events').get((req, res) => {
+  // res.status(200).send(eventonica.Event.all);
+  res.send(Event.all);
+  console.log(Event.all);
 });
+
+app.route('/users').get((req, res) => {
+  res.send(User.all);
+});
+
+// app.route('/users/)
+
+// 
