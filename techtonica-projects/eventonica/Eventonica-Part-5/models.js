@@ -3,7 +3,7 @@
  * (The following is a just a small subset for the Add Event form on the example page to work)
  */
 
-const user_Name = document.getElementById("add-username").value;
+// const user_Name = document.getElementById("add-username").value;
 
 class Event {
   static all = [
@@ -46,7 +46,14 @@ class Event {
 }
 
 class User {
-  static all = [];
+  static all = [
+    { name: 'meia',
+      id: 200
+    }, 
+    { name: 'danielle', 
+      id: 201
+    }
+  ];
   static _nextId = 200;
 
   constructor(name) {
@@ -134,6 +141,7 @@ class Eventonica {
   }
 }
 
+
 if (typeof module !== "undefined") {
   module.exports = {
     Eventonica,
@@ -141,3 +149,4 @@ if (typeof module !== "undefined") {
     Event
   };
 }
+
