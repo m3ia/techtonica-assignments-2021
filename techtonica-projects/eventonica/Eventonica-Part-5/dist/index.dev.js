@@ -1,11 +1,14 @@
 "use strict";
 
 var express = require('express'); // import addEvent from './models.js';
+// const models = require('./models.js');
+// const eventonica = models.Eventonica();
 
 
-var models = require('./models.js'); // const eventonica = models.Eventonica();
-// const { Eventonica, User, Event, testEvent } = require('./models.js');
-// const eventonica = new Eventonica(); 
+var _require = require('./models.js'),
+    User = _require.User,
+    Event = _require.Event,
+    sky = _require.sky; // const eventonica = new Eventonica(); 
 
 
 var app = express();
@@ -25,14 +28,47 @@ app.get('/', function (req, res) {
   res.send("Hello World!");
 });
 app.route('/events').get(function (req, res) {
-  // res.status(200).send(eventonica.Event.all);
   res.send(Event.all);
   console.log(Event.all);
-});
+}) // add a new event
+.post(function (req, res) {
+  var newEvent = req.body;
+  Event.all.push(newEvent);
+  res.status(200).send(Event.all);
+}); // http://localhost:3000/events/100 returns the event with the specific id
+
+app.route('/events/:id').get(function (req, res) {
+  var event_id = req.params.id;
+  console.log(event_id, Event);
+  var status = 400;
+  var response = "Unable to fetch data!";
+  Event.all.forEach(function (event) {
+    if (event['id'] == event_id) {
+      res.status(200).send(event);
+    }
+  });
+}); // get all users 
+
 app.route('/users').get(function (req, res) {
-  res.send(models.User.all);
-});
+  res.send(User.all);
+}) // add a new user, and return all users
+.post(function (req, res) {
+  var newUser = req.body;
+  User.all.push(newUser);
+  res.status(200).send(User.all);
+}); // http://localhost:3000/users/200 gets user with specific id
+
+app.route('/users/:id').get(function (req, res) {
+  var user_id = req.params.id;
+  var status = 400;
+  var response = "Unable to fetch data!";
+  User.all.forEach(function (user) {
+    if (user['id'] == user_id) {
+      res.status(200).send(user);
+    }
+  });
+}); // get specific user 
+
 app.route('/sky').get(function (req, res) {
-  res.send(models.sky);
-}); // app.route('/users/)
-//
+  res.send(sky);
+}); //
