@@ -20,7 +20,7 @@ app.route('/customers').get((req, res) => {
      * For a more robust API, you should implement a check here
      */
 
-    let newCustomer = req.body; // req.body seems to take in the input? 
+    let newCustomer = req.body; // req.body is an undefined object
     customers.push(newCustomer);
 
     /*
